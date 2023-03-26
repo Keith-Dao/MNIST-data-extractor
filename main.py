@@ -28,12 +28,12 @@ def get_parser() -> argparse.ArgumentParser:
         action="store_true"
     )
     parser.add_argument(
-        "--image", "-i",
+        "--image",
         required=True,
         help="The location of the image binary."
     )
     parser.add_argument(
-        "--label", "-l",
+        "--label",
         required=True,
         help="The location of the label binary."
     )
