@@ -35,3 +35,11 @@ Otherwise:
 
 1. Create and activate a python virtual environment, follow [link](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments) for instructions
 2. Install the packages using `pip install -r requirements.txt`
+
+## 2. Run
+
+After setup, to run the extractor:
+
+1. Extract the binaries
+2. Activate the environment, if not already active
+3. Run `python main.py [--force-create] <save_location> --image=<image binary location> --label=<label binary location>`
