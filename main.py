@@ -23,8 +23,8 @@ def get_parser() -> argparse.ArgumentParser:
         help="The location to save the images."
     )
     parser.add_argument(
-        "-f",
-        help="Force missing parent folders in save_location to be created.",
+        "--force-create",
+        help="Create missing parent folders in save_location to be created.",
         action="store_true"
     )
     parser.add_argument(
@@ -46,7 +46,10 @@ def main() -> None:
     parser = get_parser()
     args = vars(parser.parse_args())
 
-    extractor = Extractor(args["save_location"], create_parents=args["f"])
+    extractor = Extractor(
+        args["save_location"],
+        create_parents=args["force_create"]
+    )
     extractor.extract(
         image_file_location=args["image"],
         label_file_location=args["label"]
