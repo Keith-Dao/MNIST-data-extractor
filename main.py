@@ -3,7 +3,7 @@ This module is the CLI tool for the data extractor.
 """
 import argparse
 
-from extractor.extractor import Extractor
+from src.extractor import Extractor
 
 
 def get_parser() -> argparse.ArgumentParser:

@@ -65,6 +65,7 @@ class Extractor:
         Args:
             image_metadata: The first 16 bytes of the image file
             label_metadata: The first 8 bytes of the label file
+
         Returns:
             The number of images, the number of rows and columns in an image.
         """
@@ -110,6 +111,7 @@ class Extractor:
             image_file: The image file reader
             label_file: The label file reader
             image_dimension: The image dimensions
+
         Returns:
             The image as a PIL image and the image's class label.
         """
