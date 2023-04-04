@@ -1,5 +1,6 @@
 python := python
 pip := pip
+pip_flags := --require-virtualenv
 
 .PHONY: install clean
 .DEFAULT_GOAL := default
@@ -10,8 +11,8 @@ default:
 	$(python) -m venv .env
 
 install: 
-	$(pip) install --upgrade pip
-	$(pip) install -r requirements.txt
+	$(pip) $(pip_flags) install --upgrade pip
+	$(pip) $(pip_flags) install -r requirements.txt
 
 clean:
 	rm -rf .env
